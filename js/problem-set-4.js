@@ -3,8 +3,8 @@
  */
 
 function hello() {
-
-  // WRITE YOUR EXERCISE 1 CODE HERE
+  var div = document.getElementById("output1");
+  div.innerHTML = "Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -24,7 +24,9 @@ function helloAgain() {
   // Use the name variable declared above to store the user's response. You
   // do not need to re-declare it, only assign it a value.
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
+name = prompt("Please enter your name");
+var div = document.getElementById("output2");
+div.innerHTML = 'Hello, ' + name + '!';
 
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -44,7 +46,9 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
+let fahr = ((cels*1.8) + 32).toFixed(2);
+var div = document.getElementById("output3");
+div.innerHTML = cels + ' degrees Celsius equals ' + fahr + ' degrees Fahrenheit.';
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -64,8 +68,9 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
-
+  let cels = ((fahr-32) * 5/9).toFixed(2);
+  var div = document.getElementById("output4");
+  div.innerHTML = fahr + ' degrees Fahrenheit equals ' + cels + ' degrees Celsius.';
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
@@ -88,7 +93,24 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+  let miles = 0;
+  let yards = 0;
+  let feet = 0;
+while (inches >= 63360) {
+  miles = miles + 1
+  inches = inches - 63360;
+}
+while (inches >= 36) {
+  yards = yards + 1
+  inches = inches - 36;
+}
+while (inches >= 12) {
+  feet = feet + 1
+  inches = inches - 12;
+}
+
+var div = document.getElementById("output5");
+div.innerHTML = 'Miles: ' + miles + '<br/>' + 'Yards: ' + yards + '<br/>' + 'Feet: ' + feet + '<br/>' + 'Inches: ' + inches;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -112,7 +134,19 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+  let kilometers = 0;
+  let meters = 0;
+while (centimeters >= 100000) {
+  kilometers = kilometers + 1
+  centimeters = centimeters - 100000;
+}
+while (centimeters >= 100) {
+  meters = meters + 1
+  centimeters = centimeters - 100;
+}
+
+var div = document.getElementById("output6");
+div.innerHTML = 'Kilometers: ' + kilometers + '<br/>' + 'Meters: ' + meters + '<br/>' + 'Centimeters: ' + centimeters;
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
@@ -136,7 +170,19 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
+  let kilometers = 0;
+  let meters = 0;
+while (centimeters >= 100000) {
+  kilometers = kilometers + 1
+  centimeters = centimeters - 100000;
+}
+while (centimeters >= 100) {
+  meters = meters + 1
+  centimeters = centimeters - 100;
+}
+
+var div = document.getElementById("output6");
+div.innerHTML = 'Kilometers: ' + kilometers + '<br/>' + 'Meters: ' + meters + '<br/>' + 'Centimeters: ' + centimeters;
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -160,7 +206,19 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
+  let kilometers = 0;
+  let meters = 0;
+while (centimeters >= 100000) {
+  kilometers = kilometers + 1
+  centimeters = centimeters - 100000;
+}
+while (centimeters >= 100) {
+  meters = meters + 1
+  centimeters = centimeters - 100;
+}
+
+var div = document.getElementById("output6");
+div.innerHTML = 'Kilometers: ' + kilometers + '<br/>' + 'Meters: ' + meters + '<br/>' + 'Centimeters: ' + centimeters;
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -184,7 +242,19 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
+  let kilometers = 0;
+  let meters = 0;
+while (centimeters >= 100000) {
+  kilometers = kilometers + 1
+  centimeters = centimeters - 100000;
+}
+while (centimeters >= 100) {
+  meters = meters + 1
+  centimeters = centimeters - 100;
+}
+
+var div = document.getElementById("output6");
+div.innerHTML = 'Kilometers: ' + kilometers + '<br/>' + 'Meters: ' + meters + '<br/>' + 'Centimeters: ' + centimeters;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -207,8 +277,19 @@ function change() {
   ////////////////////// DO NOT MODIFY
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
+  let kilometers = 0;
+  let meters = 0;
+while (centimeters >= 100000) {
+  kilometers = kilometers + 1
+  centimeters = centimeters - 100000;
+}
+while (centimeters >= 100) {
+  meters = meters + 1
+  centimeters = centimeters - 100;
+}
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
+var div = document.getElementById("output6");
+div.innerHTML = 'Kilometers: ' + kilometers + '<br/>' + 'Meters: ' + meters + '<br/>' + 'Centimeters: ' + centimeters;
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
