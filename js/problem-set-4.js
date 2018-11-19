@@ -298,26 +298,35 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  let coins = 0
-while (amount >= .25) {
-  coins = coins + 1
-  amount = amount - .25;
-}
-while (amount >= .10) {
-  coins = coins + 1
-  amount = amount - .10;
-}
-while (amount >= .05) {
-  coins = coins + 1
-  amount = amount - .05;
-}
-while (amount >= .01) {
-  coins = coins + 1
-  amount = amount - .01;
-}
 
-var div = document.getElementById("output10");
-div.innerHTML = coins + ' coins.'
+  let pennies = amount*100
+  let quarters = 0;
+  let dimes = 0;
+  let nickels = 0;
+
+  while (pennies >= 25) {
+    quarters = quarters + 1;
+    pennies = pennies - 25;
+  }
+  while (pennies >= 10) {
+    dimes = dimes + 1;
+    pennies = pennies - 10;
+  }
+  while (pennies >= 5) {
+    nickels = nickels + 1;
+    pennies = pennies - 5;
+  }
+
+let coins = Math.floor(quarters + dimes + pennies + nickels);
+
+  var div = document.getElementById("output10");
+  div.innerHTML = coins + ' coins.';
+
+  if (input <= .01 || input <= .05 || input <= .25 || input <= .1) {
+    var div = document.getElementById("output10");
+    div.innerHTML = coins + ' coin.';
+  }
+
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
